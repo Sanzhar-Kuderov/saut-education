@@ -1,0 +1,281 @@
+//
+//
+//
+//
+// ====================================================================================
+.main.about {
+}
+
+// ====================================================================================
+.content-about {
+}
+.content-about__body {
+    margin: 40px 0px 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.content-about__content {
+    padding: 50px 45px 100px;
+    flex: 0 1 60%;
+    border-radius: 20px;
+    background: $color_F5F5F5;
+}
+.content-about__title {
+    margin: 0px 0px 26px;
+    font-family: $family_Montserrat;
+    font-size: 45px;
+    line-height: 53px;
+    font-weight: 700;
+    color: $color_292929;
+}
+.content-about__text {
+    margin: 0px 0px 20px;
+    font-family: $family_Montserrat;
+    font-size: 16px;
+    line-height: 24px;
+    color: $color_292929;
+    &:last-child {
+        margin: 0;
+    }
+}
+.content-about__img {
+    padding: 0px 0px  0px 50px;
+    flex: 0 1 40%;
+    display: flex;
+    justify-content: end;
+    img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+}
+@media(max-width: 990px) {
+    .content-about__img {
+        padding: 0px 0px 0px 20px;
+    }
+}
+@media(max-width: 770px) {
+    .content-about__body {
+        margin: 40px 0px 50px;
+        flex-direction: column;
+    }
+    .content-about__content {
+        padding: 30px;
+    }
+    .content-about__title {
+        font-size: 35px;
+        line-height: 40px;
+    }
+    .content-about__img {
+        padding: 20px 0px 0px 0px;
+    }
+}
+
+// ====================================================================================
+.goal-about {
+}
+.gial-about__body {
+    margin: 0px 0px 90px;
+}
+.gial-about__row {
+    margin: 0px -18px 34px;
+    display: flex;
+    justify-content: space-between;
+}
+.gial-about__column {
+    margin: 0px 18px;
+    padding: 40px;
+    border: 0.5px solid $color_454545;
+    border-radius: 20px;
+}
+.gial-about__title {
+    margin: 0px 0px 13px;
+    font-family: $family_Montserrat;
+    font-size: 35px;
+    line-height: 54px;
+    font-weight: 600;
+    color: $color_292929;
+}
+.gial-about__text {
+    font-family: $family_Montserrat;
+    font-size: 16px;
+    line-height: 24px;
+    color: $color_292929;
+}
+.gial-about__banner {
+    padding: 40px 35px 60px;
+    border-radius: 20px;
+    background: $color_F4D07B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.gial-about__banner-title {
+    margin: 0px 45px 0px 0px;
+    font-family: $family_Montserrat;
+    font-size: 35px;
+    line-height: 53px;
+    font-weight: 600;
+    color: $color_292929;
+}
+.gial-about__banner-text {
+    font-family: $family_Montserrat;
+    font-size: 16px;
+    line-height: 24px;
+    color: $color_292929;
+}
+@media(max-width: 770px) {
+    .gial-about__row {
+        margin: 0;
+        flex-direction: column;
+    }
+    .gial-about__column {
+        margin: 0px 0px 20px;
+    }
+    .gial-about__banner {
+        flex-direction: column;
+        align-items: start;
+    }
+    .gial-about__banner-title {
+        margin: 0px 0px 13px;
+    }
+}
+
+// ====================================================================================
+.diploma-about {
+}
+.diploma-about__body {
+    margin: 0px 0px 90px;
+}
+.diploma-about__top {
+    margin: 0px 0px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.diploma-about__title {
+    font-family: $family_Montserrat;
+    font-size: 45px;
+    line-height: 53px;
+    font-weight: 700;
+    color: $color_292929;
+}
+.diploma-about__arrows {
+    min-width: 0;
+
+    .slick-list.draggable {
+        display: none;
+    }
+    .slick-prev.slick-arrow {
+        margin: 0px 20px 0px 0px;
+        width: 60px;
+        height: 60px;
+        border: 1px solid $color_838383;
+        border-radius: 50%;
+        font-size: 0;
+        background: url('../img/icon/arrow-left.svg') center / 30px 30px no-repeat;
+    }
+    .slick-next.slick-arrow {
+        width: 60px;
+        height: 60px;
+        border: 1px solid $color_838383;
+        border-radius: 50%;
+        font-size: 0;
+        transform: rotate(180deg);
+        background: url('../img/icon/arrow-left.svg') center / 30px 30px no-repeat;
+    }
+}
+.diploma-about__arrow-img {
+}
+.diploma-about__slick {
+    padding: 60px 0px 0px;
+    overflow: hidden;
+
+    .slick-dots {
+        margin: 30px 0px 0px;
+        display: flex;
+        justify-content: center;
+        li {
+            margin: 0px 2.5px;
+            width: 14px;
+            height: 14px;
+            border: 1.5px solid $colorWhite;
+            border-radius: 50%;
+            background: $color_A4A4A4;
+            cursor: pointer;
+        }
+        .slick-active {
+            border: 1.5px solid $color_273953;
+            background: $color_273953;
+        }
+        button {
+            font-size: 0;
+        }
+    }
+}
+.diploma-about__column {
+    margin: 0px 10px;
+    border-radius: 20px;
+    background: $color_F5F5F5;
+}
+.diploma-about__column-body {
+    padding: 0px 0px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.diploma-about__column-img {
+    margin: -60px 0px 0px;
+    width: 340px;
+    height: 240px;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.diploma-about__column-date {
+    margin: -18px 0px 20px;
+    padding: 15px 45px;
+    border-radius: 10px;
+    background: $color_F4D07B;
+    font-family: $family_Montserrat;
+    font-size: 28px;
+    font-weight: 600;
+    color: $color_292929;
+}
+.diploma-about__column-title {
+    margin: 0px 0px 20px;
+    text-align: center;
+    font-family: $family_Montserrat;
+    font-size: 23px;
+    line-height: 26px;
+    font-weight: 600;
+    color: $color_292929;
+}
+.diploma-about__column-subtitle {
+    font-family: $family_Montserrat;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    color: $color_292929;
+}
+@media(max-width: 850px) {
+    .diploma-about__top {
+        margin: 0px 0px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .diploma-about__title {
+        margin: 0px 0px 20px;
+    }
+    .diploma-about__arrows {
+        margin: auto;
+    }
+}
+@media(max-width: 770px) {
+    .diploma-about__title {
+        font-size: 35px;
+    }
+}

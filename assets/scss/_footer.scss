@@ -1,0 +1,175 @@
+//
+//
+//
+//
+// ====================================================================================
+.footer {
+    background: $color_F3F4F4;
+}
+
+// ====================================================================================
+.main-footer {
+}
+.main-footer__body {
+    padding: 50px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.main-footer__logo {
+}
+.main-footer__menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.main-footer__list {
+}
+.main-footer__item {
+    margin: 0px 0px 10px;
+    &:last-child {
+        margin: 0;
+    }
+    &.title {
+        margin: 0px 0px 16px;
+        font-family: $family_Montserrat;
+        font-size: 16px;
+        font-weight: 700;
+        color: $color_292929;
+    }
+}
+.main-footer__link {
+    font-family: $family_Montserrat;
+    font-weight: 300;
+    color: $color_292929;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.main-footer__contact {
+}
+.main-footer__contact-item {
+    margin: 0px 0px 15px;
+    &:last-child {
+        margin: 0;
+    }
+}
+.main-footer__contact-link {
+    display: flex;
+    font-family: $family_Montserrat;
+    align-items: center;
+    &:hover {
+        .main-footer__contact-text {
+            text-decoration: underline;
+        }
+    }
+}
+.main-footer__contact-img {
+    margin: 0px 16px 0px 0px;
+    min-width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: $color_273953;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-footer__contact-text {
+    font-family: $family_Montserrat;
+    font-size: 18px;
+    line-height: 24px;
+    color: $color_292929;
+}
+.main-footer__link-instagram {
+}
+@media(max-width: 930px) {
+    .main-footer__contact {
+        width: 236px;
+    }
+}
+@media(max-width: 630px) {
+    .main-footer__body {
+        flex-direction: column;
+    }
+    .main-footer__logo {
+        margin: auto;
+        padding: 0px 0px 20px;
+    }
+    .main-footer__menu {
+        margin: 0px 0px 40px;
+        justify-content: space-between;
+    }
+    .main-footer__list {
+        width: 100%;
+    }
+    .main-footer__contact {
+        width: 100%;
+    }
+    .main-footer__link-instagram {
+        margin: auto;
+    }
+}
+@media(max-width: 500px) {
+    .main-footer__logo {
+        margin: 0px 0px 20px;
+        padding: 0;
+    }
+    .main-footer__menu {
+        flex-direction: column;
+    }
+    .main-footer__list {
+        margin: 0px 0px 20px;
+    }
+    .main-footer__link-instagram {
+        margin: 0;
+    }
+}
+
+// ====================================================================================
+.politics-footer {
+    border-top: 1px solid $color_939393;
+}
+.politics-footer__body {
+    padding: 25px 0px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.politics-footer__logo {
+    font-family: $family_Montserrat;
+}
+.politics-footer__content {
+    display: flex;
+}
+.politics-footer__link {
+    margin: 0px 85px 0px 0px;
+    display: inline-block;
+    &:last-child {
+        margin: 0;
+    }
+    font-family: $family_Montserrat;
+    color: $color_292929;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+@media(max-width: 800px) {
+    .politics-footer__body {
+        padding: 10px 0px;
+    }
+    .politics-footer__body {
+        flex-direction: column;
+        align-items: center;
+    }
+    .politics-footer__logo {
+        margin: 0px 0px 10px;
+    }
+    .politics-footer__content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .politics-footer__link {
+        margin: 0px 0px 10px;
+        &:last-child {
+            margin: 0px 0px 0px;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+//
+//
+//
+//
+// ====================================================================================
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo__img {
+    margin: 0px 12px 0px 0px;
+    width: 46px;
+    img {
+        width: 100%;
+    }
+}
+.logo__content {
+}
+.logo__title {
+    margin: 0px 0px 5px;
+    width: 74px;
+    img {
+        width: 100%;
+    }
+}
+.logo__subtitle {
+    width: 71px;
+    img {
+        width: 100%;
+    }
+}
