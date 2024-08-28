@@ -61,6 +61,7 @@
     font-weight: 600;
     text-transform: uppercase;
     color: $colorWhite;
+    transition: 0.3s all;
     &:hover {
         color: $color_273953;
         background: $color_F5F5F5;
@@ -183,6 +184,7 @@
     }
 }
 .help-main__item {
+    flex: auto;
     border-bottom: 2px solid $color_909090;
     cursor: pointer;
     &:hover,
@@ -195,6 +197,7 @@
 }
 .help-main__link {
     padding: 0px 0px 15px;
+    width: 100%;
     text-align: center;
     display: inline-block;
     font-family: $family_Montserrat;
@@ -202,6 +205,7 @@
     line-height: 26px;
     font-weight: 300;
     color: $color_273953;
+    transition: 0.3s all;
 }
 @media(max-width: 1240px) {
     .help-main__list {
@@ -794,6 +798,7 @@
     font-weight: 600;
     color: $colorWhite;
     cursor: pointer;
+    transition: 0.3s all;
     &:hover {
         color: $color_273953;
         background: $color_F5F5F5;
@@ -1247,6 +1252,7 @@
     background: $color_F5F5F5;
     display: flex;
     flex-direction: column;
+    transition: 0.3s all;
     &:hover {
         border: 1px solid $color_454545;
         background: $colorWhite;
@@ -1290,6 +1296,7 @@
     font-size: 16px;
     font-weight: 600;
     color: $colorWhite;
+    cursor: pointer;
 }
 .services-main__banner {
     padding: 40px 35px;
@@ -1356,6 +1363,9 @@
     width: 100%;
 }
 .services-main__banner-item {
+    
+}
+.services-main__banner-text {
     padding: 0px 0px 11px;
     border-bottom: 1px solid $color_454545;
     font-family: $family_Montserrat;
@@ -1376,6 +1386,8 @@
     font-size: 16px;
     font-weight: 600;
     color: $colorWhite;
+    transition: 0.3s all;
+    cursor: pointer;
 }
 @media(max-width: 1250px) {
     .services-main__banner {
@@ -1557,6 +1569,7 @@
     font-size: 16px;
     font-weight: 600;
     color: $colorWhite;
+    transition: 0.3s all;
     &:hover {
         color: $color_273953;
         background: $colorWhite;
@@ -1572,10 +1585,11 @@
     }
 }
 .video-main__youtybe-border {
-    border-radius: 10px;
-    overflow: hidden;
     width: 312px;
     height: 207px;
+    display: inline-block;
+    border-radius: 10px;
+    overflow: hidden;
     position: relative;
 }
 .video-main__youtybe-video {

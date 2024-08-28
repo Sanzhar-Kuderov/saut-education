@@ -19,25 +19,32 @@ for (let i = 0; i < submit_help.length; i++) {
 }
 
 
-let listControl = document.querySelectorAll('#control-video');
-for (let i = 0; i < listControl.length; i++) {
-    listControl[i].addEventListener('click', function () {
-        listControl[i].classList.add('none');
-        let video = document.getElementById(`video-${i + 1}`);
-        video.setAttribute('controls', '');
-        video.play();
-    })
-}
-
-
 document.querySelector('#burger').addEventListener('click', function () {
+    document.querySelector('.body').classList.add('no-scroll');
     document.querySelector('#smarphone-fullscreen').classList.add('active');
     document.querySelector('#smarphone-menu').classList.add('active');
 })
 document.querySelector('#smarphone-exit').addEventListener('click', function () {
     document.querySelector('#smarphone-fullscreen').classList.remove('active');
     document.querySelector('#smarphone-menu').classList.remove('active');
+    document.querySelector('.body').classList.remove('no-scroll');
 })
+
+
+const submit_modal_consultant = document.querySelectorAll('#submit-modal-consultant');
+for (let i = 0; i < submit_modal_consultant.length; i++) {
+    submit_modal_consultant[i].addEventListener('click', function () {
+        document.querySelector('.body').classList.add('no-scroll');
+        document.querySelector('.modal').classList.add('active');
+    })
+}
+document.querySelector('.mobal__form-exit').addEventListener('click', function () {
+    document.querySelector('.modal.active').classList.remove('active');
+    document.querySelector('.body').classList.remove('no-scroll');
+})
+
+
+$('#filterPhone, #modal-filter-hone').mask('+7 (999) 999-99-99');
 
 
 $('.diploma-about__slick').slick({
@@ -81,3 +88,6 @@ $('.diploma-about__arrows').slick({
         }
     ]
 })
+
+
+Fancybox.bind();

@@ -19,6 +19,9 @@
     overflow: hidden;
     background: $color_F5F5F5;
     flex: 0 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .content-contact__title {
     margin: 0px 0px 20px;
@@ -38,6 +41,14 @@
 .content-contact__link {
     display: inline-flex;
     align-items: center;
+    &:hover {
+        .content-contact__link-img {
+            background: $color_F4D07B;
+        }
+        .content-contact__link-text {
+            color: $color_F4D07B;
+        }
+    }
 }
 .content-contact__link-img {
     margin: 0px 16px 0px 0px;
@@ -48,6 +59,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.3s all;
 }
 .content-contact__link-text {
     width: 250px;
@@ -55,6 +67,7 @@
     font-size: 23px;
     line-height: 34px;
     color: $color_292929;
+    transition: 0.3s all;
 }
 .content-contact__map {
     flex: 0 1 50%;

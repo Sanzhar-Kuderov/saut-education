@@ -41,8 +41,9 @@
     font-family: $family_Montserrat;
     font-weight: 300;
     color: $color_292929;
+    transition: 0.3s all;
     &:hover {
-        text-decoration: underline;
+        color: $color_F4D07B;
     }
 }
 .main-footer__contact {
@@ -58,8 +59,11 @@
     font-family: $family_Montserrat;
     align-items: center;
     &:hover {
+        .main-footer__contact-img {
+            background: $color_F4D07B;
+        }
         .main-footer__contact-text {
-            text-decoration: underline;
+            color: $color_F4D07B;
         }
     }
 }
@@ -72,12 +76,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.3s all;
 }
 .main-footer__contact-text {
     font-family: $family_Montserrat;
     font-size: 18px;
     line-height: 24px;
     color: $color_292929;
+    transition: 0.3s all;
 }
 .main-footer__link-instagram {
 }
@@ -147,8 +153,9 @@
     }
     font-family: $family_Montserrat;
     color: $color_292929;
+    transition: 0.3s all;
     &:hover {
-        text-decoration: underline;
+        color: $color_F4D07B;
     }
 }
 @media(max-width: 800px) {

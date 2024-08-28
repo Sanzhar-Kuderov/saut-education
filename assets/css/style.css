@@ -8,7 +8,6 @@
   flex-direction: column;
   overflow: hidden;
   position: relative;
-  z-index: 5000;
 }
 
 .container {
@@ -31,6 +30,10 @@
   .container {
     padding: 0px 10px;
   }
+}
+
+.body.no-scroll {
+  overflow: hidden;
 }
 
 .main {
@@ -159,9 +162,10 @@ h6 {
   font-family: Montserrat;
   font-size: 17px;
   color: #292929;
+  transition: 0.3s all;
 }
 .main-header__menu-link:hover {
-  text-decoration: underline;
+  color: #F4D07B;
 }
 
 .main-header__phone {
@@ -169,7 +173,8 @@ h6 {
   align-items: center;
 }
 .main-header__phone:hover .main-header__phone-link {
-  border-bottom: 1px solid #292929;
+  color: #F4D07B;
+  border-bottom: 1px dashed #F4D07B;
 }
 
 .main-header__phone-img {
@@ -191,6 +196,7 @@ h6 {
   font-weight: 500;
   text-transform: uppercase;
   color: #292929;
+  transition: 0.3s all;
 }
 
 .main-header__burger {
@@ -408,6 +414,136 @@ h6 {
 /* Точки (булиты) */
 /* Активная точка */
 /* Элемент точки */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20000;
+}
+.modal.active {
+  display: block;
+}
+.modal .container {
+  height: 100%;
+}
+
+.modal__body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobal__fullscreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #292929;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.mobal__form {
+  padding: 80px 60px 60px 60px;
+  width: 500px;
+  border-radius: 20px;
+  background: #F5F5F5;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobal__form-exit {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  display: flex;
+  justify-content: end;
+  cursor: pointer;
+}
+.mobal__form-exit:hover .mobal__form-img {
+  background: #273953;
+}
+.mobal__form-exit:hover .mobal__form-img span::before,
+.mobal__form-exit:hover .mobal__form-img span {
+  background: #F5F5F5;
+}
+
+.mobal__form-img {
+  width: 45px;
+  height: 45px;
+  border: 2px solid #273953;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(45deg);
+}
+.mobal__form-img span {
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  background: #273953;
+  position: relative;
+  transition: 0.3s all;
+}
+.mobal__form-img span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #273953;
+  transform: rotate(90deg);
+  transition: 0.3s all;
+}
+
+.mobal__form-title {
+  margin: 0px 0px 30px;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 35px;
+  line-height: 42px;
+  font-weight: 700;
+}
+
+.mobal__form-input {
+  margin: 0px 0px 30px 0px;
+  padding: 16px 20px 20px;
+  width: 100%;
+  display: block;
+  border: 1px solid #454545;
+  border-radius: 15px;
+  font-family: Montserrat;
+  font-size: 16px;
+}
+
+.mobal__form-submit {
+  padding: 20px 0px;
+  width: 100%;
+  border: 2px solid #273953;
+  border-radius: 20px;
+  background: #273953;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+.mobal__form-submit:hover {
+  color: #273953;
+  background: #F5F5F5;
+}
+
 .contact-main__body {
   margin: 40px 0px 90px;
   width: 100%;
@@ -465,6 +601,7 @@ h6 {
   font-weight: 600;
   text-transform: uppercase;
   color: #fff;
+  transition: 0.3s all;
 }
 .contact-main__content-link:hover {
   color: #273953;
@@ -589,6 +726,7 @@ h6 {
 }
 
 .help-main__item {
+  flex: auto;
   border-bottom: 2px solid #909090;
   cursor: pointer;
 }
@@ -601,6 +739,7 @@ h6 {
 
 .help-main__link {
   padding: 0px 0px 15px;
+  width: 100%;
   text-align: center;
   display: inline-block;
   font-family: Montserrat;
@@ -608,6 +747,7 @@ h6 {
   line-height: 26px;
   font-weight: 300;
   color: #273953;
+  transition: 0.3s all;
 }
 
 @media (max-width: 1240px) {
@@ -1229,6 +1369,7 @@ h6 {
   font-weight: 600;
   color: #fff;
   cursor: pointer;
+  transition: 0.3s all;
 }
 .order-main__form-submit:hover {
   color: #273953;
@@ -1670,6 +1811,7 @@ h6 {
   background: #F5F5F5;
   display: flex;
   flex-direction: column;
+  transition: 0.3s all;
 }
 .services-main__column:hover {
   border: 1px solid #454545;
@@ -1718,6 +1860,7 @@ h6 {
   font-size: 16px;
   font-weight: 600;
   color: #fff;
+  cursor: pointer;
 }
 
 .services-main__banner {
@@ -1787,7 +1930,7 @@ h6 {
   width: 100%;
 }
 
-.services-main__banner-item {
+.services-main__banner-text {
   padding: 0px 0px 11px;
   border-bottom: 1px solid #454545;
   font-family: Montserrat;
@@ -1810,6 +1953,8 @@ h6 {
   font-size: 16px;
   font-weight: 600;
   color: #fff;
+  transition: 0.3s all;
+  cursor: pointer;
 }
 
 @media (max-width: 1250px) {
@@ -1962,6 +2107,7 @@ h6 {
   font-size: 16px;
   font-weight: 600;
   color: #fff;
+  transition: 0.3s all;
 }
 .video-main__submit:hover {
   color: #273953;
@@ -1980,10 +2126,11 @@ h6 {
 }
 
 .video-main__youtybe-border {
-  border-radius: 10px;
-  overflow: hidden;
   width: 312px;
   height: 207px;
+  display: inline-block;
+  border-radius: 10px;
+  overflow: hidden;
   position: relative;
 }
 
@@ -2366,6 +2513,9 @@ h6 {
   overflow: hidden;
   background: #F5F5F5;
   flex: 0 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .content-contact__title {
@@ -2387,6 +2537,12 @@ h6 {
   display: inline-flex;
   align-items: center;
 }
+.content-contact__link:hover .content-contact__link-img {
+  background: #F4D07B;
+}
+.content-contact__link:hover .content-contact__link-text {
+  color: #F4D07B;
+}
 
 .content-contact__link-img {
   margin: 0px 16px 0px 0px;
@@ -2397,6 +2553,7 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.3s all;
 }
 
 .content-contact__link-text {
@@ -2405,6 +2562,7 @@ h6 {
   font-size: 23px;
   line-height: 34px;
   color: #292929;
+  transition: 0.3s all;
 }
 
 .content-contact__map {
@@ -2473,9 +2631,10 @@ h6 {
   font-family: Montserrat;
   font-weight: 300;
   color: #292929;
+  transition: 0.3s all;
 }
 .main-footer__link:hover {
-  text-decoration: underline;
+  color: #F4D07B;
 }
 
 .main-footer__contact-item {
@@ -2490,8 +2649,11 @@ h6 {
   font-family: Montserrat;
   align-items: center;
 }
+.main-footer__contact-link:hover .main-footer__contact-img {
+  background: #F4D07B;
+}
 .main-footer__contact-link:hover .main-footer__contact-text {
-  text-decoration: underline;
+  color: #F4D07B;
 }
 
 .main-footer__contact-img {
@@ -2503,6 +2665,7 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.3s all;
 }
 
 .main-footer__contact-text {
@@ -2510,6 +2673,7 @@ h6 {
   font-size: 18px;
   line-height: 24px;
   color: #292929;
+  transition: 0.3s all;
 }
 
 @media (max-width: 930px) {
@@ -2577,12 +2741,13 @@ h6 {
   display: inline-block;
   font-family: Montserrat;
   color: #292929;
+  transition: 0.3s all;
 }
 .politics-footer__link:last-child {
   margin: 0;
 }
 .politics-footer__link:hover {
-  text-decoration: underline;
+  color: #F4D07B;
 }
 
 @media (max-width: 800px) {

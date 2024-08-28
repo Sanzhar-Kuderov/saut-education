@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Главная</title>
 </head>
 
-<body>
+<body class="body">
 
     <div class="wrapper">
 
@@ -303,17 +304,19 @@
                         <div class="acquainted-main__images">
                             <div class="acquainted-main__row">
                                 <div class="acquainted-main__column">
-                                    <div class="acquainted-main__column-img">
+                                    <a href="assets/img/main/diploma-1.jpg" data-fancybox="gallery0"
+                                        class="acquainted-main__column-img">
                                         <img src="assets/img/main/diploma-1.jpg" alt="">
-                                    </div>
+                                    </a>
                                     <div class="acquainted-main__column-date">2015 год</div>
                                     <div class="acquainted-main__column-name">Nazarbayev <br>University</div>
                                     <div class="acquainted-main__column-knowledge">Bachelor of Economics</div>
                                 </div>
                                 <div class="acquainted-main__column">
-                                    <div class="acquainted-main__column-img">
+                                    <a href="assets/img/main/diploma-2.jpg" data-fancybox="gallery1"
+                                        class="acquainted-main__column-img">
                                         <img src="assets/img/main/diploma-2.jpg" alt="">
-                                    </div>
+                                    </a>
                                     <div class="acquainted-main__column-date">2016 год</div>
                                     <div class="acquainted-main__column-name">Queen Mary <br> University of London</div>
                                     <div class="acquainted-main__column-knowledge">Master of Law and Economics (LLM)
@@ -321,9 +324,10 @@
                                 </div>
                             </div>
                             <div class="acquainted-main__diploma">
-                                <div class="acquainted-main__diploma-img">
+                                <a href="assets/img/main/diploma-3.jpg" data-fancybox="gallery2"
+                                    class="acquainted-main__diploma-img">
                                     <img src="assets/img/main/diploma-3.jpg" alt="">
-                                </div>
+                                </a>
                                 <div class="acquainted-main__diploma-content">
                                     <div class="acquainted-main__diploma-date">2023 год</div>
                                     <div class="acquainted-main__diploma-name">Cornell SC Johnson College of Business
@@ -352,7 +356,7 @@
                                 <div class="order-main__form-inputs">
                                     <input type="text" class="order-main__form-input" placeholder="Ваше имя *" required>
                                     <input type="tel" attern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="order-main__form-input"
-                                        placeholder="+7" required>
+                                        id="filterPhone" placeholder="+7" required>
                                 </div>
                                 <input type="submit" class="order-main__form-submit" value="Свяжитесь со мной">
                             </form>
@@ -420,7 +424,7 @@
                                     Внутренние знания изприемной комиссии Корнелл
                                 </div>
                                 <div class="why-main__column-text">
-                                    Работая в приемной комиссии Корнеллской бизнес-школы, я знаю критерии отбора.  Я
+                                    Работая в приемной комиссии Корнеллской бизнес-школы, я знаю критерии отбора. Я
                                     проводил интервью и понимаю, что ищут бизнес-школы. Эти знания позволяют мне помочь
                                     вам с эссе, рекомендательными письмами и подготовкой к интервью.
                                 </div>
@@ -539,7 +543,7 @@
                                         Прозрачность и понятность
                                     </div>
                                     <div class="material-main__column-text">
-                                        Работая на Уолл-стрит, я научился предоставлять материал ясно.  Этот подход я
+                                        Работая на Уолл-стрит, я научился предоставлять материал ясно. Этот подход я
                                         применил к GMAT, создав слайды и видеолекции, которые понятны даже ребенку.
                                     </div>
                                 </div>
@@ -592,9 +596,9 @@
                                         Флэш карты
                                     </div>
                                 </ul>
-                                <a href="" class="services-main__column-link">
+                                <div class="services-main__column-link" id="submit-modal-consultant">
                                     Консультация
-                                </a>
+                                </div>
                             </div>
                             <div class="services-main__column">
                                 <div class="services-main__column-title">
@@ -620,9 +624,9 @@
                                         Флэш карты
                                     </div>
                                 </ul>
-                                <a href="" class="services-main__column-link">
+                                <div class="services-main__column-link" id="submit-modal-consultant">
                                     Консультация
-                                </a>
+                                </div>
                             </div>
                             <div class="services-main__column">
                                 <div class="services-main__column-title">
@@ -646,9 +650,9 @@
                                         Все книги и ресурсы
                                     </div>
                                 </ul>
-                                <a href="" class="services-main__column-link">
+                                <div class="services-main__column-link" id="submit-modal-consultant">
                                     Консультация
-                                </a>
+                                </div>
                             </div>
                         </div>
                         <div class="services-main__banner one">
@@ -657,28 +661,40 @@
                             </div>
                             <ul class="services-main__banner-row">
                                 <li class="services-main__banner-item">
-                                    Анализ выбора университета
+                                    <div class="services-main__banner-text">
+                                        Анализ выбора университета
+                                    </div>
                                 </li>
                                 <li class="services-main__banner-item">
-                                    Руководство по рекомендационным письмам
+                                    <div class="services-main__banner-text">
+                                        Руководство по рекомендационным письмам
+                                    </div>
                                 </li>
                                 <li class="services-main__banner-item">
-                                    Поддержка в написании эссе
+                                    <div class="services-main__banner-text">
+                                        Поддержка в написании эссе
+                                    </div>
                                 </li>
                                 <li class="services-main__banner-item">
-                                    Помощь с резюме
+                                    <div class="services-main__banner-text">
+                                        Помощь с резюме
+                                    </div>
                                 </li>
                                 <li class="services-main__banner-item">
-                                    Создание заявления о цели
+                                    <div class="services-main__banner-text">
+                                        Создание заявления о цели
+                                    </div>
                                 </li>
                                 <li class="services-main__banner-item">
-                                    Поддержка при подаче заявлений
+                                    <div class="services-main__banner-text">
+                                        Поддержка при подаче заявлений
+                                    </div>
                                 </li>
                             </ul>
                             <div class="services-main__banner-link">
-                                <a href="" class="services-main__banner-submit">
+                                <div class="services-main__banner-submit" id="submit-modal-consultant">
                                     Консультация
-                                </a>
+                                </div>
                             </div>
                         </div>
                         <div class="services-main__banner dwo">
@@ -687,16 +703,20 @@
                             </div>
                             <ul class="services-main__banner-row">
                                 <li class="services-main__banner-item">
-                                    Все книги и ресурсы, которые помогут поступить
+                                    <div class="services-main__banner-text">
+                                        Все книги и ресурсы, которые помогут поступить
+                                    </div>
                                 </li>
                                 <li class="services-main__banner-item">
-                                    Полное мое сопровождение и подготовка к университетам
+                                    <div class="services-main__banner-text">
+                                        Полное мое сопровождение и подготовка к университетам
+                                    </div>
                                 </li>
                             </ul>
                             <div class="services-main__banner-link">
-                                <a href="" class="services-main__banner-submit">
+                                <div class="services-main__banner-submit" id="submit-modal-consultant">
                                     Консультация
-                                </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -718,7 +738,8 @@
                         </div>
                         <div class="video-main__youtybe">
                             <div class="video-main__youtybe-column">
-                                <div class="video-main__youtybe-border">
+                                <a href="assets/video/main.mp4" data-fancybox="video0"
+                                    class="video-main__youtybe-border">
                                     <video class="video-main__youtybe-video" poster="assets/img/main/video-1.jpg"
                                         id="video-1">
                                         <source src="assets/video/main.mp4" type="video/mp4">
@@ -726,10 +747,11 @@
                                     <div class="video-main__youtybe-stop" id="control-video">
                                         <img src="assets/img/icon/video-stop.svg" alt="">
                                     </div>
-                                </div>
+                                </a>
                             </div>
                             <div class="video-main__youtybe-column">
-                                <div class="video-main__youtybe-border">
+                                <a href="assets/video/main.mp4" data-fancybox="video1"
+                                    class="video-main__youtybe-border">
                                     <video class="video-main__youtybe-video" poster="assets/img/main/video-1.jpg"
                                         id="video-2">
                                         <source src="assets/video/main.mp4" type="video/mp4">
@@ -737,7 +759,7 @@
                                     <div class="video-main__youtybe-stop" id="control-video">
                                         <img src="assets/img/icon/video-stop.svg" alt="">
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -837,9 +859,31 @@
             </div>
         </footer>
 
+        <div class="modal">
+            <div class="container">
+                <div class="modal__body">
+                    <div class="mobal__fullscreen"></div>
+                    <form action="" class="mobal__form">
+                        <div class="mobal__form-exit">
+                            <div class="mobal__form-img">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="mobal__form-title">Заказать консультацию</div>
+                        <input type="text" class="mobal__form-input" placeholder="Ваше имя*" required>
+                        <input type="tel" class="mobal__form-input" placeholder="+7" attern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                            id="modal-filter-hone" required>
+                        <input type="submit" class="mobal__form-submit" value="Отправить">
+                    </form>
+                </div>
+            </div>
+        </div>
+
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="assets/js/jQuery-3.7.1.min.js"></script>
+    <script src="assets/js/jquery.maskedinput.js"></script>
     <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/app.js"></script>
 

@@ -1,0 +1,128 @@
+//
+//
+//
+//
+// ====================================================================================
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20000;
+    &.active {
+        display: block;
+    }
+    .container {
+        height: 100%;
+    }
+}
+.modal__body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mobal__fullscreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $color_292929;
+    opacity: 0.5;
+    z-index: -1;
+}
+.mobal__form {
+    padding: 80px 60px 60px 60px;
+    width: 500px;
+    border-radius: 20px;
+    background: $color_F5F5F5;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.mobal__form-exit {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
+    &:hover {
+        .mobal__form-img {
+            background: $color_273953;
+            span::before,
+            span {
+                background: $color_F5F5F5;
+            }
+        }
+    }
+}
+.mobal__form-img {
+    width: 45px;
+    height: 45px;
+    border: 2px solid $color_273953;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(45deg);
+    span {
+        display: inline-block;
+        width: 30px;
+        height: 3px;
+        background: $color_273953;
+        position: relative;
+        transition: 0.3s all;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: $color_273953;
+            transform: rotate(90deg);
+            transition: 0.3s all;
+        }
+    }
+}
+.mobal__form-title {
+    margin: 0px 0px 30px;
+    text-align: center;
+    font-family: $family_Montserrat;
+    font-size: 35px;
+    line-height: 42px;
+    font-weight: 700;
+}
+.mobal__form-input {
+    margin: 0px 0px 30px 0px;
+    padding: 16px 20px 20px;
+    width: 100%;
+    display: block;
+    border: 1px solid $color_454545;
+    border-radius: 15px;
+    font-family: $family_Montserrat;
+    font-size: 16px;
+}
+.mobal__form-submit {
+    padding: 20px 0px;
+    width: 100%;
+    border: 2px solid $color_273953;
+    border-radius: 20px;
+    background: $color_273953;
+    text-align: center;
+    font-family: $family_Montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    color: $colorWhite;
+    cursor: pointer;
+    transition: 0.3s all;
+    &:hover {
+        color: $color_273953;
+        background: $color_F5F5F5;
+    }
+}
