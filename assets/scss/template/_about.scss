@@ -71,6 +71,16 @@
         padding: 20px 0px 0px 0px;
     }
 }
+@media(max-width: 550px) {
+    .content-about__title {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .content-about__text {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
 
 // ====================================================================================
 .goal-about {
@@ -139,6 +149,24 @@
     }
     .gial-about__banner-title {
         margin: 0px 0px 13px;
+    }
+}
+@media(max-width: 550px) {
+    .gial-about__title {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .gial-about__text {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .gial-about__banner-title {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .gial-about__banner-text {
+        font-size: 14px;
+        line-height: 20px;
     }
 }
 
@@ -277,5 +305,22 @@
 @media(max-width: 770px) {
     .diploma-about__title {
         font-size: 35px;
+    }
+}
+@media(max-width: 550px) {
+    .diploma-about__title {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .diploma-about__column-date {
+        font-size: 20px;
+    }
+    .diploma-about__column-title {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .diploma-about__column-subtitle {
+        font-size: 14px;
+        line-height: 20px;
     }
 }

@@ -31,11 +31,11 @@ document.querySelector('#smarphone-exit').addEventListener('click', function () 
 })
 
 
-function modal_active () {
+function modal_active() {
     document.querySelector('.body').classList.add('no-scroll');
     document.querySelector('.modal').classList.add('active');
 }
-function modal_exit () {
+function modal_exit() {
     document.querySelector('.modal.active').classList.remove('active');
     document.querySelector('.body').classList.remove('no-scroll');
 }
@@ -52,6 +52,7 @@ document.querySelector('.mobal__fullscreen').addEventListener('click', function 
     modal_exit();
 })
 
+Fancybox.bind();
 
 $('#filterPhone, #modal-filter-hone').mask('+7 (999) 999-99-99');
 
@@ -97,6 +98,3 @@ $('.diploma-about__arrows').slick({
         }
     ]
 })
-
-
-Fancybox.bind();

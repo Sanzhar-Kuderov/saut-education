@@ -128,3 +128,16 @@
         background: $color_F5F5F5;
     }
 }
+@media(max-width: 550px) {
+    .mobal__form-title {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .mobal__form-input {
+        font-size: 14px;
+    }
+    .mobal__form-submit {
+        padding: 14px 0px;
+        font-size: 14px;
+    }
+}

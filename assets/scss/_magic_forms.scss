@@ -1,0 +1,23 @@
+//
+//
+//
+//
+// ====================================================================================
+.alert.alert-success.alert-dismissible {
+    margin: 0px 0px 10px;
+    display: flex;
+    justify-content: space-between;
+
+    .close {
+        display: none;
+    }
+
+    p {
+        width: 100%;
+        text-align: center;
+        font-family: $family_Montserrat;
+        font-size: 14px;
+        line-height: 20px;
+        color: $color_273953;
+    }
+}
