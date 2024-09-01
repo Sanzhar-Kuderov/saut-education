@@ -31,16 +31,25 @@ document.querySelector('#smarphone-exit').addEventListener('click', function () 
 })
 
 
+function modal_active () {
+    document.querySelector('.body').classList.add('no-scroll');
+    document.querySelector('.modal').classList.add('active');
+}
+function modal_exit () {
+    document.querySelector('.modal.active').classList.remove('active');
+    document.querySelector('.body').classList.remove('no-scroll');
+}
 const submit_modal_consultant = document.querySelectorAll('#submit-modal-consultant');
 for (let i = 0; i < submit_modal_consultant.length; i++) {
     submit_modal_consultant[i].addEventListener('click', function () {
-        document.querySelector('.body').classList.add('no-scroll');
-        document.querySelector('.modal').classList.add('active');
+        modal_active();
     })
 }
 document.querySelector('.mobal__form-exit').addEventListener('click', function () {
-    document.querySelector('.modal.active').classList.remove('active');
-    document.querySelector('.body').classList.remove('no-scroll');
+    modal_exit();
+})
+document.querySelector('.mobal__fullscreen').addEventListener('click', function () {
+    modal_exit();
 })
 
 

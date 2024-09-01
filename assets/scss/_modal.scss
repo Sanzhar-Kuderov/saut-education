@@ -24,6 +24,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 .mobal__fullscreen {
     position: absolute;
@@ -33,7 +34,7 @@
     height: 100%;
     background: $color_292929;
     opacity: 0.5;
-    z-index: -1;
+    z-index: 1;
 }
 .mobal__form {
     padding: 80px 60px 60px 60px;
@@ -43,6 +44,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    z-index: 2;
 }
 .mobal__form-exit {
     position: absolute;

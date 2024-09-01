@@ -4,7 +4,12 @@
 //
 // ====================================================================================
 .header {
-    z-index: 9999;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: $colorWhite;
 }
 
 
@@ -133,11 +138,15 @@
 }
 .phone-header__menu-content {
     padding: 0px 30px;
-    width: 400px;
-    background: $color_273953;
+    width: 100%;
+    height: 100%;
+    background: $color_F5F5F5;
+    position: relative;
 }
 .phone-header__menu-exit {
-    padding: 30px 0px 50px 0px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
     display: flex;
     justify-content: end;
 }
@@ -154,7 +163,7 @@
         display: block;
         width: 30px;
         height: 3px;
-        background: $color_F4D07B;
+        background: $color_273953;
         position: relative;
         &::before {
             content: '';
@@ -164,13 +173,19 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: $color_F4D07B;
+            background: $color_273953;
         }
     }
 }
 .phone-header__menu-list {
     padding: 0px 0px;
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 .phone-header__menu-item {
     margin: 0px 0px 20px;
@@ -185,9 +200,12 @@
     font-size: 20px;
     line-height: 28px;
     font-weight: 600;
-    color: $color_F4D07B;
+    color: $color_273953;
 }
 @media(max-width: 1100px) {
+    .main-header__body {
+        padding: 10px 0px;
+    }
     .main-header__logo {
         margin: 0;
         flex: auto;
