@@ -9,6 +9,16 @@
   overflow: hidden;
   position: relative;
 }
+@media (max-width: 1100px) {
+  .wrapper {
+    padding: 60px 0px 0px;
+  }
+}
+@media (max-width: 900px) {
+  .wrapper {
+    padding: 50px 0px 0px;
+  }
+}
 
 .container {
   padding: 0px 0px;
@@ -590,7 +600,7 @@ h6 {
   font-family: Montserrat;
   font-size: 14px;
   line-height: 20px;
-  color: #273953;
+  color: green;
 }
 
 .contact-main__body {
@@ -745,15 +755,20 @@ h6 {
   }
 }
 @media (max-width: 550px) {
+  .contact-main__body {
+    padding: 25px 0px;
+  }
   .contact-main__content {
     margin: 0px 10px;
   }
   .contact-main__content-title {
+    margin: 0px 0px 10px;
     max-width: 400px;
     font-size: 25px;
     line-height: 30px;
   }
   .contact-main__content-subtitle {
+    margin: 0px 0px 10px;
     font-size: 14px;
     line-height: 20px;
     font-weight: 400;
@@ -763,17 +778,15 @@ h6 {
     width: 250px;
     font-size: 12px;
   }
-  .contact-main__author-name {
-    font-size: 16px;
-  }
-}
-@media (max-width: 500px) {
   .contact-main__img img {
-    width: 400px;
+    width: 300px;
   }
   .contact-main__author {
-    bottom: 550px;
-    right: calc(50% - 160px);
+    bottom: 400px;
+    right: calc(50% - 140px);
+  }
+  .contact-main__author-name {
+    font-size: 16px;
   }
 }
 .help-main__body {
@@ -849,16 +862,37 @@ h6 {
     display: grid;
     grid-template: repeat(4, 1fr)/repeat(1, 1fr);
   }
+  .help-main__list:hover .help-main__item.active {
+    border-bottom: 0px solid #909090;
+  }
+  .help-main__list:hover .help-main__item.active:hover {
+    border-bottom: 0px solid #F4D07B;
+  }
+  .help-main__list:hover .help-main__item.active:hover .help-main__link {
+    font-weight: 600;
+  }
+  .help-main__list:hover .help-main__item.active .help-main__link {
+    font-weight: 300;
+  }
+  .help-main__item {
+    margin: 0;
+    border-right: 2px solid #909090;
+    border-bottom: 0;
+  }
+  .help-main__item:hover, .help-main__item.active {
+    border-right: 2px solid #F4D07B;
+    border-bottom: 0;
+  }
   .help-main__item:last-child {
     margin: 0px;
+  }
+  .help-main__link {
+    text-align: left;
   }
 }
 @media (max-width: 550px) {
   .help-main__title {
     font-size: 25px;
-  }
-  .help-main__item {
-    margin: 0px 0px 10px;
   }
   .help-main__link {
     padding: 0px 0px 7px;
@@ -1481,6 +1515,9 @@ h6 {
     font-size: 14px;
     line-height: 20px;
   }
+  .acquainted-main__diploma {
+    padding: 10px;
+  }
 }
 @media (max-width: 450px) {
   .acquainted-main__content-result {
@@ -1888,11 +1925,42 @@ h6 {
     font-size: 18px;
     line-height: 25px;
   }
+  .banner-main__main-img {
+    width: 100%;
+    height: auto;
+  }
   .banner-main__main-img img:nth-child(1) {
-    right: -100px;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .banner-main__main-img img:nth-child(2) {
-    right: 220px;
+    width: 100px;
+    right: 50%;
+  }
+  .banner-main__column-img {
+    padding: 0px 20px;
+  }
+  .banner-main__column:nth-child(1) .banner-main__column-img img:nth-child(1) {
+    margin: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  .banner-main__column:nth-child(1) .banner-main__column-img img:nth-child(2) {
+    display: none;
+  }
+  .banner-main__column:nth-child(1) .banner-main__column-img img:nth-child(3) {
+    width: 100px;
+    left: 50%;
   }
   .banner-main__column-title {
     font-size: 18px;
@@ -2169,6 +2237,11 @@ h6 {
   width: 100%;
 }
 
+.services-main__banner-item {
+  display: flex;
+  align-items: end;
+}
+
 .services-main__banner-text {
   padding: 0px 0px 11px;
   border-bottom: 1px solid #454545;
@@ -2212,7 +2285,6 @@ h6 {
   .services-main__banner.one .services-main__banner-item:nth-child(1), .services-main__banner.one .services-main__banner-item:nth-child(2), .services-main__banner.one .services-main__banner-item:nth-child(3), .services-main__banner.one .services-main__banner-item:nth-child(4), .services-main__banner.one .services-main__banner-item:nth-child(5), .services-main__banner.one .services-main__banner-item:nth-child(6) {
     margin: 0px 10px 20px 10px;
     width: auto;
-    text-align: center;
   }
   .services-main__banner.dwo {
     padding: 40px 30px;
@@ -2575,6 +2647,9 @@ h6 {
   }
 }
 @media (max-width: 550px) {
+  .content-about__content {
+    padding: 30px 15px;
+  }
   .content-about__title {
     font-size: 25px;
     line-height: 30px;
@@ -2659,6 +2734,9 @@ h6 {
   }
 }
 @media (max-width: 550px) {
+  .gial-about__column {
+    padding: 30px 20px;
+  }
   .gial-about__title {
     font-size: 25px;
     line-height: 30px;
@@ -2666,6 +2744,9 @@ h6 {
   .gial-about__text {
     font-size: 14px;
     line-height: 20px;
+  }
+  .gial-about__banner {
+    padding: 30px 20px;
   }
   .gial-about__banner-title {
     font-size: 25px;
@@ -2904,6 +2985,7 @@ h6 {
 }
 
 .content-contact__map {
+  max-height: 450px;
   flex: 0 1 50%;
   border-radius: 20px;
   overflow: hidden;
@@ -2943,6 +3025,9 @@ h6 {
   .content-contact__link-text {
     font-size: 18px;
     line-height: 24px;
+  }
+  .content-contact__map {
+    max-height: 400px;
   }
 }
 .footer {
@@ -3051,12 +3136,16 @@ h6 {
     margin: auto;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 550px) {
+  .main-footer__body {
+    padding: 25px 10px;
+  }
   .main-footer__logo {
     margin: 0px 0px 20px;
     padding: 0;
   }
   .main-footer__menu {
+    margin: 0px 0px 20px;
     flex-direction: column;
   }
   .main-footer__list {
@@ -3071,13 +3160,25 @@ h6 {
 }
 
 .politics-footer__body {
-  padding: 25px 0px 30px;
+  padding: 20px 0px 20px;
   display: flex;
   justify-content: space-between;
 }
 
 .politics-footer__logo {
   font-family: Montserrat;
+  display: flex;
+  flex-wrap: wrap;
+}
+.politics-footer__logo span {
+  display: block;
+}
+.politics-footer__logo a {
+  padding: 0px 5px 0px;
+  display: block;
+}
+.politics-footer__logo img {
+  padding: 2px 3px 0px 0px;
 }
 
 .politics-footer__content {
@@ -3105,6 +3206,9 @@ h6 {
   .politics-footer__body {
     flex-direction: column;
     align-items: center;
+  }
+  .politics-footer__logo {
+    justify-content: center;
   }
   .politics-footer__content {
     flex-direction: column;

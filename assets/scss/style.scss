@@ -34,6 +34,12 @@ $color_838383: #838383;
     flex-direction: column;
     overflow: hidden;
     position: relative;
+    @media (max-width: 1100px) {
+        padding: 60px 0px 0px;
+    }
+    @media (max-width: 900px) {
+        padding: 50px 0px 0px;
+    }
 }
 // </Оболочка>=========================================================================
 

@@ -72,6 +72,9 @@
     }
 }
 @media(max-width: 550px) {
+    .content-about__content {
+        padding: 30px 15px;
+    }
     .content-about__title {
         font-size: 25px;
         line-height: 30px;
@@ -152,6 +155,9 @@
     }
 }
 @media(max-width: 550px) {
+    .gial-about__column {
+        padding: 30px 20px;
+    }
     .gial-about__title {
         font-size: 25px;
         line-height: 30px;
@@ -159,6 +165,9 @@
     .gial-about__text {
         font-size: 14px;
         line-height: 20px;
+    }
+    .gial-about__banner {
+        padding: 30px 20px;
     }
     .gial-about__banner-title {
         font-size: 25px;

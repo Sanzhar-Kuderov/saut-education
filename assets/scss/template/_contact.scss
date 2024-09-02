@@ -70,6 +70,7 @@
     transition: 0.3s all;
 }
 .content-contact__map {
+    max-height: 450px;
     flex: 0 1 50%;
     border-radius: 20px;
     overflow: hidden;
@@ -108,5 +109,8 @@
     .content-contact__link-text {
         font-size: 18px;
         line-height: 24px;
+    }
+    .content-contact__map {
+        max-height: 400px;
     }
 }
